@@ -113,7 +113,7 @@ int main()
     //La instrucción \n es un salto de línea Mostrando los textos separados
 
    string nombre;//En esta variable estará almacenado el nombre ingresado.
-   cin >> nombre; //Se lee el nombre
+   // cin >> nombre; //Se lee el nombre
 
    int alto=0;
     dibujar(flecha,7);
@@ -132,6 +132,9 @@ int main()
         // abajo
        }else if(nombre == "Z"){
           trasladar(flecha, 7, 0, 40);
+        // abajo
+       }else if(nombre == "W"){
+          rotar(flecha,7, 20);
        }else{
            alto =1;
             cout << "Gracias por usar nuestra aplicación" << "\n";
