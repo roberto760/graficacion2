@@ -41,6 +41,8 @@ void rotar(int fig[][2], int totalVertices, float angulo)
     }
     setcolor(YELLOW);
     dibujar(r,totalVertices);
+
+            delay(1000);
 }
 
 void escala(int fig[][2], int totalVertices, float sx, float sy)
@@ -76,19 +78,20 @@ int main()
 
     int gd = DETECT, gm;
     initgraph(&gd, &gm, NULL);
+
     int flecha[7][2]=
     {
-        {20,  70},
-        {20,  30},
-        {80,  30},
-        {80,  10},
-        {120, 50},
-        {80,  90},
-        {80,  70}
+        {120,  170},
+        {120,  130},
+        {180,  130},
+        {180,  110},
+        {220, 150},
+        {180,  190},
+        {180,  170}
     };
 
   //  initwindow(230,150,"Práctica Dibujar Imagen 2D", 200, 50);
-    dibujar(flecha,7);
+/*    dibujar(flecha,7);
 
     // trasladar(Objeto, totalVertices, tx, ty)
     trasladar(flecha, 7, 100, 50);
@@ -101,10 +104,40 @@ int main()
 
     // sesgarX(Objeto, totalVertices, shx)
     sesgarX(flecha, 7, 1.2);
-
+//rotar(flecha,7, 18);
+   */
    /* while( !kbhit() );
     closegraph( );*/
 
-        delay(10000);
+
+    //La instrucción \n es un salto de línea Mostrando los textos separados
+
+   string nombre;//En esta variable estará almacenado el nombre ingresado.
+   cin >> nombre; //Se lee el nombre
+
+   int alto=0;
+    dibujar(flecha,7);
+   while (alto ==0 ){
+        cout << "Hola! Ingrese la opcion"  << "\n";
+         cin >> nombre; //Se lee el nombre
+         //izquieda
+       if(nombre == "A"){
+          trasladar(flecha, 7, -10, 0);
+        // deecha
+       }else if(nombre == "S"){
+          trasladar(flecha, 7, 20, 0);
+        // arriba
+       }else if(nombre == "Q"){
+          trasladar(flecha, 7, 0, -30);
+        // abajo
+       }else if(nombre == "Z"){
+          trasladar(flecha, 7, 0, 40);
+       }else{
+           alto =1;
+            cout << "Gracias por usar nuestra aplicación" << "\n";
+       }
+
+    }
+   //         delay(10000);
     return 0;
 }
