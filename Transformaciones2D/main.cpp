@@ -73,6 +73,9 @@ void sesgarX(int fig[][2], int totalVertices, float shx)
 
 int main()
 {
+
+    int gd = DETECT, gm;
+    initgraph(&gd, &gm, NULL);
     int flecha[7][2]=
     {
         {20,  70},
@@ -84,7 +87,7 @@ int main()
         {80,  70}
     };
 
-    initwindow(230,150,"Práctica Dibujar Imagen 2D", 200, 50);
+  //  initwindow(230,150,"Práctica Dibujar Imagen 2D", 200, 50);
     dibujar(flecha,7);
 
     // trasladar(Objeto, totalVertices, tx, ty)
@@ -99,7 +102,9 @@ int main()
     // sesgarX(Objeto, totalVertices, shx)
     sesgarX(flecha, 7, 1.2);
 
-    while( !kbhit() );
-    closegraph( );
+   /* while( !kbhit() );
+    closegraph( );*/
+
+        delay(10000);
     return 0;
 }
