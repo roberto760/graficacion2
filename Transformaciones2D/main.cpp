@@ -122,19 +122,29 @@ int main()
          cin >> nombre; //Se lee el nombre
          //izquieda
        if(nombre == "A"){
-          trasladar(flecha, 7, -10, 0);
-        // deecha
+          trasladar(flecha, 7, -10, 0); //izquierda
        }else if(nombre == "S"){
-          trasladar(flecha, 7, 20, 0);
-        // arriba
+          trasladar(flecha, 7, 20, 0); //derecha
        }else if(nombre == "Q"){
-          trasladar(flecha, 7, 0, -30);
-        // abajo
+          trasladar(flecha, 7, 0, -40); //arriba
        }else if(nombre == "Z"){
-          trasladar(flecha, 7, 0, 40);
-        // abajo
+          trasladar(flecha, 7, 0, 30);// abajo
        }else if(nombre == "W"){
-          rotar(flecha,7, 20);
+          rotar(flecha, 7, -20); //contra manesillas de reloj
+       }else if(nombre == "E"){
+          rotar(flecha, 7, 30); //direccion manesillas de reloj
+       }else if(nombre == "J"){
+          escala(flecha, 7, 0.5, 0.6); //disminuir escala en x
+       }else if(nombre == "K"){
+          escala(flecha, 7, 0.7, 0.8); //aumentar escala en y
+       }else if(nombre == "I"){
+          escala(flecha, 7, 0.4, 0.5); //aumentar escala en y
+       }else if(nombre == "M"){
+          escala(flecha, 7, 0.3, 0.4); //disminuir escala en y
+       }else if(nombre == "X"){
+          sesgarX(flecha, 7, 1); //estirar hacia atras
+       }else if(nombre == "C"){
+          sesgarX(flecha, 7, 1.5); //estirar hacia delante
        }else{
            alto =1;
             cout << "Gracias por usar nuestra aplicación" << "\n";
