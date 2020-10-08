@@ -37,10 +37,15 @@ int main()
         {180, 20}
     };
 
-    initwindow(200,200,"Práctica Curva de Bezier 2D", 200, 50);
+    //initwindow(200,200,"Práctica Curva de Bezier 2D", 200, 50);
+
+    int gd = DETECT, gm;
+    initgraph(&gd, &gm, NULL);
     bezier2D(curva,4);
 
-    while( !kbhit() );
-    closegraph( );
+   /* while( !kbhit() );
+    closegraph( );*/
+
+            delay(10000);
     return 0;
 }
