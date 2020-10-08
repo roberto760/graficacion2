@@ -50,7 +50,7 @@ int main()
 
     int gd = DETECT, gm;
     initgraph(&gd, &gm, NULL);
-    bezier2D(curva,4);
+    bezier2D(curva,6);
 
    /* while( !kbhit() );
     closegraph( );*/

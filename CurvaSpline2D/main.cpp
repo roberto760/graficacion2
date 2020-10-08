@@ -43,10 +43,14 @@ int main()
         {40,   60}
     };
 
-    initwindow(200,200,"Práctica Dibujar Curva Spline 2D", 200, 50);
+    //initwindow(200,200,"Práctica Dibujar Curva Spline 2D", 200, 50);
+
+     int gd = DETECT, gm;
+    initgraph(&gd, &gm, NULL);
     spline2D(curva,8);
-    while( !kbhit() );
-    closegraph( );
+
+    //while( !kbhit() );
+    //closegraph( );
     return 0;
 }
 
