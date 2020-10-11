@@ -33,7 +33,7 @@ float[][] R={
 {0, 0, 0}};
 
 void setup() {
-  size(230, 160); //Tamaño de la ventana
+  size(630, 660); //Tamaño de la ventana
 }
 
 void draw() {
@@ -42,9 +42,9 @@ void draw() {
   
   dibuja(flecha, 7);
   
-  mult(flecha, Traslacion, 7);
-  dibuja(R, 7);
-  inicializa(7);
+  /*mult(flecha, Traslacion, 7);
+  //dibuja(R, 7);
+  //inicializa(7);
   
   mult(flecha, Rotacion, 7);
   dibuja(R, 7);
@@ -52,9 +52,22 @@ void draw() {
   
   mult(flecha, Escala, 7);
   dibuja(R, 7);
-  inicializa(7);
+  inicializa(7);*/
 }
 
+
+void keyPressed() {
+  if (key == 'A') {
+    mult(flecha, Traslacion, 7);
+    dibuja(R, 7);
+    inicializa(7);
+  } else if (key == 'S') {
+    
+    mult(flecha, Traslacion, 3);
+    dibuja(R, 7);
+    inicializa(7);
+  }
+}
 void mult(float[][] A, float[][] B, int n)
 {
    int i, j, k;
