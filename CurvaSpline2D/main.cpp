@@ -24,7 +24,8 @@ void spline2D(int pc[][2], int n)
                (3*u*u*u-6*u*u+4)*pc[n-2][1]/6  +
                (-3*u*u*u+3*u*u+3*u+1)*pc[n-1][1]/6 +
                u*u*u*pc[n][1]/6;
-            //n%15+1 Asegura un id de color entre 1 y 15putpixel(x, y, n%15+1);
+            //n%15+1 Asegura un id de color entre 1 y 15
+            putpixel(x, y, n%15+1);
         }
     }
 }
