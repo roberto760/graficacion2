@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package lexico;
-import lexico.*;
+import lexico.DosPrueba1;
 
 /**
  *
@@ -16,7 +16,7 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        DosPrueba1 d = new DosPrueba1("");
+        DosPrueba1 d = new DosPrueba1("/home/mikaelo/aprendizaje/codeblocks/graficacion2/alo");
         
         
     }

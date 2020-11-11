@@ -5,11 +5,14 @@
 Programa de analizador léxico que evlua si existe un numero, un separado
 un operador, una palabra, una palabra reservada
 */
+package lexico;
 import java.io.*;
 import java.util.*;
-    public class DosPrueba1{
+
+public class DosPrueba1{
     public DosPrueba1(String f){
         String bufferIn;
+        System.out.println(f);
         try{
         DataInputStream in=new DataInputStream(new FileInputStream(f));//leemos nuestro archivo de entrada
         try{
@@ -66,56 +69,58 @@ import java.util.*;
         }
         }//end while
         }catch(IOException e){}
-        }catch(FileNotFoundException e){}
+        }catch(FileNotFoundException e){
+            System.out.println(f+"FileNotFoundException");
+        }
     }
 
-/**
-Metodo que evalua nuestro caracter si existe y nos retorna
-verdadero para los separadores
-y
-falso para los operadores
-*/
-public static boolean evaluarCaracter(char c){
-if(c=='(' ) return true;
-else if(c==')')return true;
-else if(c=='<')return false;
-else if(c=='>')return false;
-else return false;
-}
+    /**
+    Metodo que evalua nuestro caracter si existe y nos retorna
+    verdadero para los separadores
+    y
+    falso para los operadores
+    */
+    public static boolean evaluarCaracter(char c){
+        if(c=='(' ) return true;
+        else if(c==')')return true;
+        else if(c=='<')return false;
+        else if(c=='>')return false;
+        else return false;
+    }
 
-/**
-retornamos nuestro caracter de operador
-*/
-public static char evaluarOperador(char c){
-char car=' ';
-if(c=='<')car='<';
-else if(c=='>')car='>';
-return car;
-}
+    /**
+    retornamos nuestro caracter de operador
+    */
+    public static char evaluarOperador(char c){
+        char car=' ';
+        if(c=='<')car='<';
+        else if(c=='>')car='>';
+        return car;
+    }
 
-/**
-retornamos nuestro caracter de separador
-*/
-public static char evaluarSeparador(char c){
-char car=' ';
-if(c=='(') car='(';
-else if(c==')')car=')';
-return car;
-}
+    /**
+    retornamos nuestro caracter de separador
+    */
+    public static char evaluarSeparador(char c){
+    char car=' ';
+    if(c=='(') car='(';
+    else if(c==')')car=')';
+    return car;
+    }
 
-/**
-buscamos si existe la palabra reservada
-*/
-public static boolean palabraReservada(String cad){
-    if(cad.equalsIgnoreCase("if")) return true;
-    else if(cad.equalsIgnoreCase("luigi"))return true;
-    else if(cad.equalsIgnoreCase("puraslineas"))return true;
-    //con equalsIgnoreCase no nos importa si esta en mayusculas o minusculas o alternadas
-    else return false;
-}
+    /**
+    buscamos si existe la palabra reservada
+    */
+    public static boolean palabraReservada(String cad){
+        if(cad.equalsIgnoreCase("if")) return true;
+        else if(cad.equalsIgnoreCase("luigi"))return true;
+        else if(cad.equalsIgnoreCase("puraslineas"))return true;
+        //con equalsIgnoreCase no nos importa si esta en mayusculas o minusculas o alternadas
+        else return false;
+    }
 
-public static void main(String ar[]){
-new DosPrueba1("entrada_prueba_3.txt");
-//este será nuestro archivo de entrada
-}
+    public static void main(String ar[]){
+        new DosPrueba1("entrada_prueba_3.txt");
+        //este será nuestro archivo de entrada
+    }
 }
