@@ -16,7 +16,7 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        DosPrueba1 d = new DosPrueba1("/home/mikaelo/aprendizaje/codeblocks/graficacion2/alo");
+        DosPrueba1 d = new DosPrueba1("/home/roberto/Documentos/graficacion2/alo");
         
         
     }
